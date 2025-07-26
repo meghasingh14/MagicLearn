@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MagicLearn - Harry Potter Educational Hub</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="magical-nav">
+        <div class="nav-container">
+            <div class="logo">
+                <h1>🏰 MagicLearn</h1>
+            </div>
+            <div class="nav-links">
+                <button class="nav-btn active" data-page="home">🏛️ Great Hall</button>
+                <button class="nav-btn" data-page="quiz">🎓 Sorting Quiz</button>
+                <button class="nav-btn" data-page="potion">🧪 Potion Lab</button>
+                <button class="nav-btn" data-page="spells">📜 Spells</button>
+                <button class="nav-btn" data-page="spellbot">🤖 SpellBot</button>
+                <button class="nav-btn" data-page="houses">🏠 Houses</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Home Page - Great Hall -->
+        <section id="home" class="page active">
+            <div class="great-hall">
+                <div class="hero-section">
+                    <h1 class="magical-title">WELCOME TO THE GREAT HALL</h1>
+                    <p class="subtitle">Embark on your magical journey of learning and discovery</p>
+                </div>
+                
+                <div class="quote-section">
+                    <h2 class="section-title">Quote of the Realm</h2>
+                    <div class="quote-container">
+                        <p id="daily-quote" class="magical-quote"></p>
+                        <button id="new-quote-btn" class="btn btn-magical">✨ New Quote</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sorting Quiz -->
+        <section id="quiz" class="page">
+            <div class="quiz-container">
+                <h1 class="magical-title">The Sorting Hat Quiz</h1>
+                <div class="quiz-content">
+                    <div id="question-container">
+                        <h2 class="question">Which object is essential to cast spells?</h2>
+                        <div class="options">
+                            <button class="option-btn" data-answer="correct">🪄 Wand</button>
+                            <button class="option-btn" data-answer="wrong">📚 Spell Book</button>
+                            <button class="option-btn" data-answer="wrong">👻 Invisibility Cloak</button>
+                        </div>
+                        <button id="reveal-fate-btn" class="btn btn-magical hidden">🎭 Reveal Your Fate</button>
+                    </div>
+                    <div id="quiz-result" class="result hidden">
+                        <h3 class="result-title"></h3>
+                        <p class="result-text"></p>
+                        <button id="retry-quiz-btn" class="btn btn-secondary">Try Again</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Potion Lab -->
+        <section id="potion" class="page">
+            <div class="potion-lab">
+                <h1 class="magical-title">Brewing Dungeon</h1>
+                <div class="lab-content">
+                    <div class="cauldron-container">
+                        <div class="cauldron">
+                            <div class="cauldron-body">
+                                <div class="potion-liquid"></div>
+                                <div class="bubbles">
+                                    <span class="bubble"></span>
+                                    <span class="bubble"></span>
+                                    <span class="bubble"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="brewing-controls">
+                        <h3>Current Ingredients:</h3>
+                        <div id="ingredient-list" class="ingredient-list"></div>
+                        <button id="mix-potion-btn" class="btn btn-magical">🧪 Mix Potion</button>
+                        <div id="potion-result" class="potion-result hidden">
+                            <p class="brewing-message"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Spells - Enchanted Scroll -->
+        <section id="spells" class="page">
+            <div class="scroll-container">
+                <h1 class="magical-title">Enchanted Scroll of Wisdom</h1>
+                <div class="scroll">
+                    <div class="scroll-content">
+                        <h3>Ancient Spells & Incantations</h3>
+                        <div id="spell-display" class="spell-display">
+                            <p class="scroll-text">Click the button below to reveal a magical spell...</p>
+                        </div>
+                        <button id="reveal-spell-btn" class="btn btn-magical">✨ Reveal Spell</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SpellBot -->
+        <section id="spellbot" class="page">
+            <div class="spellbot-container">
+                <h1 class="magical-title">SpellBot - Your Magical Guide</h1>
+                <div class="chat-container">
+                    <div id="chat-messages" class="chat-messages">
+                        <div class="message bot-message">
+                            <span class="message-sender">🤖 SpellBot:</span>
+                            <span class="message-text">Welcome, young wizard! I'm here to guide you through your magical journey. Ask me anything about spells, potions, or the magical world!</span>
+                        </div>
+                    </div>
+                    <div class="chat-input-container">
+                        <input type="text" id="chat-input" class="form-control" placeholder="Ask your magical question...">
+                        <button id="send-spell-btn" class="btn btn-magical">🪄 Send Spell</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Houses Gallery -->
+        <section id="houses" class="page">
+            <div class="houses-container">
+                <h1 class="magical-title">The Four Noble Houses</h1>
+                <div class="houses-grid">
+                    <div class="house-card gryffindor">
+                        <div class="house-crest">🦁</div>
+                        <h3 class="house-name">Gryffindor</h3>
+                        <p class="house-traits">Bravery and Courage</p>
+                        <p class="house-description">Where dwell the brave at heart</p>
+                    </div>
+                    <div class="house-card hufflepuff">
+                        <div class="house-crest">🦡</div>
+                        <h3 class="house-name">Hufflepuff</h3>
+                        <p class="house-traits">Loyalty and Patience</p>
+                        <p class="house-description">Where they are just and loyal</p>
+                    </div>
+                    <div class="house-card ravenclaw">
+                        <div class="house-crest">🦅</div>
+                        <h3 class="house-name">Ravenclaw</h3>
+                        <p class="house-traits">Wisdom and Wit</p>
+                        <p class="house-description">Where those of wit and learning</p>
+                    </div>
+                    <div class="house-card slytherin">
+                        <div class="house-crest">🐍</div>
+                        <h3 class="house-name">Slytherin</h3>
+                        <p class="house-traits">Ambition and Cunning</p>
+                        <p class="house-description">Where you'll make your real friends</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
